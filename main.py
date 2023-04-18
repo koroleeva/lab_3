@@ -1,28 +1,43 @@
 def task1():
     n = int(input("Введите количество слов"))
-    snew = ""
+    wnew = ""
     for i in range(n):
-        slovo = input("Введите слово")
-        snew = snew + " " + slovo
-    print(snew)
+        word = input("Введите слово")
+        wnew = wnew + " " + word
+    print(wnew)
 
 
 def task2():
-    snew = ""
-    slovo = (input("Введите слово"))
-    while slovo != ("stop"):
-        slovo = (input("Введите слово"))
-        snew = snew + " " + slovo
-    print(snew)
+    wnew = ""
+    word = (input("Введите слово"))
+    while word != ("stop"):
+        word = (input("Введите слово"))
+        wnew = wnew + " " + word
+    print(wnew)
 
 
 def task3():
-    slovo = (input('Введите слово'))
-    for i in slovo:
-        if (i == "ф"):
-            print("Ого! Это редкое слово!")
-        else:
-            print("Эх, это не очень редкое слово...")
+    word = (input('Введите слово'))
+    wnew = list(word.lower())
+    letter = "ф" in wnew
+
+    if letter:
+        print("Ого! Это редкое слово!")
+    else:
+        print("Эх, это не очень редкое слово...")
+
+
+def task4():
+    i = 0
+    while i < 4:
+        from random import randint
+        n = (randint(1, 9))
+        m = (randint(1, 9))
+        print(n, "+", m, "=", end=' ')
+        s = (input())
+        if s != n + m:
+            i += 1
+
 
 
 task3()
